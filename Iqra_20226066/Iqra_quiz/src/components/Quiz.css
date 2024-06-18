@@ -1,0 +1,37 @@
+body{
+    background: linear-gradient(#232d19, #4d4d54);
+
+
+}
+.container{
+    
+    margin-top: 300px;
+    margin-bottom: 300px;
+    margin-left: 580px;
+    width: 1000px;
+    justify-content: center;
+    
+  
+    
+}
+.container button {
+    background-color: #010906;
+    border: 1px solid green;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    width: 50%; 
+    display: block; 
+    text-align: center;  
+    
+   
+}
+  
+  .container button:not(:last-child) {
+    border-bottom: none;
+  }
+  
+
+  .container button:hover {
+    background-color: #011c01;
+  }
