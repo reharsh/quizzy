@@ -1,0 +1,21 @@
+.card-container{
+    height:80vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    position: relative;
+    width: 600px;
+    max-width:80vw;
+    padding:20px;
+    border-radius: 20px;
+    background-size:cover;
+    background-position: center;
+    box-shadow: 0px 20px 60px 0px rgba(0 , 0 , 0 , 0.3);
+
+}
+.swipe{
+    position: absolute;
+    
+}
