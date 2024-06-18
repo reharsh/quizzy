@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background:rgb(1, 1, 18);
+    background:rgb(16, 23, 80);
 }
 .index{
     background: rgb(215, 213, 213);
@@ -18,7 +18,7 @@ body{
 .app{
     background: rgb(215, 213, 213);
     width:90%;
-    max-width:600px;
+    max-width:500px;
     margin:100px auto 0;
     border-radius: 10px;
     padding:30px;
@@ -96,6 +96,18 @@ body{
 .btn:disabled{
     cursor: no-drop;
 }
+#back{
+    background-color:rgb(4,16,55);
+    color:white;
+    font-weight: 500;
+    width:150px;
+    border:0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: left;
+}
 #next-btn{
     background: rgb(4, 16, 55);
     color:white;
@@ -106,6 +118,7 @@ body{
     margin:20px auto 0;
     border-radius: 5px;
     cursor:pointer;
+    align-self: right;
     display:none;
 }
 .correct{

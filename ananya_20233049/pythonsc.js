@@ -61,6 +61,10 @@ const nextButton=document.getElementById("next-btn");
 let curruentQuestionIndex=0;
 let score=0;
 
+function Gotohome(){
+    window.location="index.html";
+}
+
 function  startQuiz(){
     curruentQuestionIndex=0;
     score=0;
@@ -106,13 +110,13 @@ function selectAnswer(e){
         }
         button.disabled=true;
     });
-    nextButton.style.display="block";
+    nextButton.style.display="inline";
 }
 function showScore(){
     resetState();
     questionElement.innerHTML=`You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML="Play Again";
-    nextButton.style.display="block";
+    nextButton.style.display="inline";
 }
 function handleNextButton(){
     curruentQuestionIndex++;
