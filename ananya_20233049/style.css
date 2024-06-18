@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background:rgb(16, 23, 80);
+}
+.index{
+    background: rgb(215, 213, 213);
+    width:90%;
+    max-width:600px;
+    margin:100px auto 0;
+    border-radius: 10px;
+    padding:30px;
+}
+.app{
+    background: rgb(215, 213, 213);
+    width:90%;
+    max-width:500px;
+    margin:100px auto 0;
+    border-radius: 10px;
+    padding:30px;
+    
+}
+.app h1{
+    font-weight: 600;
+    color:blueviolet;
+    font-size:25px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding:20px 0;
+
+}
+.topic{
+    padding: 20px 0;
+}
+#answer-buttons{
+    background: white;
+    color:white;
+    font-weight:500;
+    width:100%;
+    border:1px solid grey;
+    padding:10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor:pointer;
+    transition:all 0.3s;
+    display:block;
+}
+.quiz h2{
+    font-size:18px;
+    color: Black;
+    font-weight: 600;
+}
+.button{
+    background: white;
+    color:black;
+    font-weight:500;
+    width:100%;
+    border:1px solid grey;
+    padding:10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor:pointer;
+    transition:all 0.3s;
+}
+.button:hover{
+    background-color: rgb(32, 17, 78);
+    color:white;
+
+}
+.btn{
+    background: white;
+    color:black;
+    font-weight:500;
+    width:100%;
+    border:1px solid grey;
+    padding:10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 5px;
+    cursor:pointer;
+    transition:all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background-color: grey;
+    color:white;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#back{
+    background-color:rgb(4,16,55);
+    color:white;
+    font-weight: 500;
+    width:150px;
+    border:0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: left;
+}
+#next-btn{
+    background: rgb(4, 16, 55);
+    color:white;
+    font-weight: 500;
+    width:150px;
+    border:0;
+    padding:10px;
+    margin:20px auto 0;
+    border-radius: 5px;
+    cursor:pointer;
+    align-self: right;
+    display:none;
+}
+.correct{
+    background-color: rgb(65, 190, 123);
+}
+.incorrect{
+    background-color: rgb(200, 64, 64);
+}
