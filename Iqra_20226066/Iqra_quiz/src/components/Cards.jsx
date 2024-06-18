@@ -24,14 +24,22 @@ const ques = {
     { question: 'Launched in 1980, pac-man features four ghosts named Blinky, Pinky, Inky and Clyde', answer: true },
     { question: 'Disney Land is the  Disney World theme park opened on May 1, 1989 ', answer: false },
     { question: 'The 1984 Olympic Games were held in  Los Angeles', answer: true },
-    { question: 'vyihoerj', answer: true },
-    { question: 'vyihoerj', answer: true },
-    { question: 'vyihoerj', answer: true },
-    { question: 'vyihoerj', answer: true }
+    { question: 'Brahmastra was released in 2015', answer: false },
+    { question: 'Ranbir Kapoor was starred in Animal', answer: true },
+    { question: 'Priyanka Chopras daughter name is Malti', answer: true },
+    { question: 'Karan johar is the producer of animal movie', answer: false }
   ],
   mythology: [
-    { question: 'vyihoerj', answer: true },
-    { question: 'bhujroij', answer: true }
+    { question: 'Puranas were written before Vedas', answer: false },
+    { question: 'There are in total four vedas', answer: true },
+    { question: 'In Indian Mythology Asurs are villains', answer: true },
+    { question: 'Pandavas were the protagonist in Mahabharat', answer: true },
+    { question: 'Sita was held hostaged by Duryodhana', answer: false },
+    { question: 'There are in total three vedas', answer: false },
+    { question: 'Rig veda consists of charms and spells', answer: false },
+    { question: 'Parvati is the wife of Lord Shiva', answer: true },
+    { question: 'Lord krishna is one of the avatar of lord vishnu', answer: true },
+    { question: 'There are in total 15 purana', answer: false },
   ]
 };
 
@@ -62,10 +70,33 @@ export const Cards = () => {
   const outOfFrame = (name) => {
     console.log(name + ' left the screen!');
   };
+  const canGoBack = currentIndex < currentQuestions.length - 1;
+  const swipe = async (dir) => {
+    if (canSwipe && currentIndex < currentQuestions.length) {
+        await childRefs[currentQuestions.length-currentIndex-1].current.swipe(dir);
+    }
+};
+
+  const goBack = async () => {
+    if (!canGoBack) return;
+    const newIndex = currentIndex-1;
+    updateCurrentIndex(newIndex);
+    await childRefs[newIndex].current.restoreCard();
+};
 
   return (
     <div>
-      <h1>Quizzy</h1>
+         <div className='buttoner'>
+                <button onClick={()=>{
+                    navigate("/")
+                }}
+                >End Quiz</button>
+                <button onClick={()=>{
+                     location.reload()
+                }}
+                >Retake Quiz</button>
+            </div>
+      <h1> {subject} Quizzy</h1>
       <div className='cardContainer'>
         {currentQuestions.map((character) => (
           <TinderCard
@@ -81,12 +112,17 @@ export const Cards = () => {
           </TinderCard>
         ))}
       </div>
+      <br></br>
       {lastDirection ? (
         <h2 className='infoText'>You swiped {lastDirection}</h2>
       ) : (
         <h2 className='infoText' />
       )}
+      <h2 key={lastDirection} className='infoText'>
+                {Math.min(currentIndex,currentQuestions.length)} out of {currentQuestions.length}
+                </h2>
       <h3> Score:{score}</h3>
+      <h4> Left is False and Right is True</h4>
     </div>
   );
 };
