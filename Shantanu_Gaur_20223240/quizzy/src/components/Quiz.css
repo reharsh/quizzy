@@ -48,13 +48,18 @@
   }
   
   .swipe {
+    margin-top: 100px;
     position: absolute;
+    justify-content: center;
+    will-change: transform;
   }
   
   .cardContainer {
-    width: 90vw;
-    max-width: 260px;
-    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    position: relative;
   }
   
   .card {
@@ -80,15 +85,15 @@
   
   .card h3 {
     position: absolute;
-
-    top: 0;
-    margin: 10px;
+    margin: auto;
     color: #000000;
+    justify-content: center;
   }
   
   .infoText {
     width: 100%;
     justify-content: center;
+    margin-top: 25px;
     display: flex;
     color: #fff;
     animation-name: popup;
@@ -96,7 +101,8 @@
   }
   
   .buttons {
-    margin: 20px;
+    margin-top: 150px;
+    margin-left: 70px;
     display: flex;
     flex-wrap: wrap;
   }

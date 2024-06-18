@@ -20,6 +20,7 @@ export const Home = () => {
             localStorage.setItem("topic","technology")
         }}
         >Technology</button>
+        <h3>Swipe right for true, left for false</h3>
         </div>
     )
 }
