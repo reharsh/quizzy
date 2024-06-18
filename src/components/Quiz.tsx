@@ -1,4 +1,5 @@
 import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import '../Styles/Quiz.css'; 
 
 interface QuizProps {
   topic: string;
@@ -66,6 +67,9 @@ const Quiz: React.FC<QuizProps> = ({ topic, setScore }) => {
       endQuiz();
     }
   };
+  const onclickHandlerHome=()=>{
+    window.location.href='/'; // i would have used axios 
+  }
 
   const checkAnswer = (answer: string) => {
     const correctAnswer = questions[index].answer.toLowerCase().trim();
@@ -99,20 +103,24 @@ const Quiz: React.FC<QuizProps> = ({ topic, setScore }) => {
 
   if (scoreCalculated) {
     return (
-      <div>
+      <div className="quiz-container">
         <h1>Quiz Ended!</h1>
         <p>Your final score: {correctAnswers}</p>
+        <p>Skipped :{skipped}</p>
+        <button onClick={onclickHandlerHome}>Home</button>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="quiz-container">
       <h1>{questions[index].question}</h1>
-      <p>Question {index + 1} of {questions.length}</p>
-      <p>Time left: {timer}s</p>
+      <p className="question-number">Question {index + 1} of {questions.length}</p>
+      <p className="timer">Time left: {timer}s</p>
       {showAnswer ? (
-        <p>{showAnswer}</p>
+        <p className={`answer-message ${showAnswer === 'Correct' ? 'correct' : 'wrong'}`}>
+          {showAnswer}
+        </p>
       ) : (
         <form onSubmit={handleSubmit}>
           <input type="text" value={userAnswer} onChange={handleAnswerChange} />
