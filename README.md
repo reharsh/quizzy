@@ -53,3 +53,9 @@ Create a simple 3-screen quiz app with Tinder-like functionality using React. Th
 
 ## contact
 for any queries or deadline extension reach out to us.
+
+
+
+
+## how to start project locally
+# in the root folder (run npm install and run npm run dev)
