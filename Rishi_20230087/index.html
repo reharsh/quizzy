@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+   
+    <div id="topic-selection" class="screen">
+      <h2 id="myH2">Select a Topic</h2>
+      <button onclick="selectTopic('Physics')">Physics</button>
+      <button onclick="selectTopic('Chemistry')">Chemistry</button>
+      <button onclick="selectTopic('Computer')">Computer</button>
+    </div>
+
+   
+    <div id="quiz-questions" class="screen">
+      <div id="question-card">
+        <p id="question-text"></p>
+        <div id="swipe-buttons">
+          <button onclick="answerQuestion(false)">False</button>
+          <button onclick="answerQuestion(true)">True</button>
+        </div>
+      </div>
+      <p id="question-number"></p>
+    </div>
+
+   
+    <div id="final-score" class="screen">
+      <h2>Your Score: <span id="score"></span></h2>
+      <button onclick="retry()">Retry</button>
+      <button onclick="goHome()">Home</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
